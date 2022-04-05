@@ -24,7 +24,7 @@ public class AnimeController {
     private final AnimeRepository repository;
 
     @GetMapping
-    public List<Anime> findAll(@RequestParam(value = "id") @MaxSizeValidation Integer id) {
+    public List<Anime> findAll(@RequestParam(value = "id", required = false) @MaxSizeValidation Integer id) {
         return this.repository.findAll();
     }
 
